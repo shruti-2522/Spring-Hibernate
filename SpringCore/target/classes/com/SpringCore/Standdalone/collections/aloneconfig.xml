@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd 
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context.xsd
+ http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd">
+ 
+ <!-- Standalone List -->
+	<util:list list-class="java.util.Vector" id="myBestFrnds">
+		<value>Sairaj</value>
+		<value>Bhagi</value>
+		<value>Bhavna</value>
+		<value>Hitesh</value>
+		<value>Shraddha</value>
+		<value>Rushali</value>
+		<value>Niki</value>
+		<value>Pradhunya</value>
+	</util:list>
+	
+	<!--standalone Map  -->
+	<util:map map-class="java.util.TreeMap" id="fee1">
+	<entry key="Spring Cousrse" value="7000"></entry>
+	<entry key="Python Course" value="8000"></entry>
+	<entry key="Hibernate Course" value="5000"></entry>
+	</util:map>
+	
+	<!-- Standalone Properties -->
+	<util:properties id="dbconfig">
+	<prop key="databse">com.mysql.jdbc.driver</prop>
+	<prop key="username">Shruti</prop>
+	<prop key="password">1234</prop>
+	<prop key="url">www.mysirg.com</prop>
+	</util:properties>
+
+	<bean class="com.SpringCore.Standdalone.collections.Pesron"
+		name="person1">
+		<!-- <property name="friends">
+		<ref bean="myBestFrnds" />
+		</property>  -->
+		
+		<property name="freinds" ref="myBestFrnds" />
+		<property name="fees" ref="fee1" />
+		<property name="prop1" ref="dbconfig" />
+	</bean>
+	
+	
+
+</beans>

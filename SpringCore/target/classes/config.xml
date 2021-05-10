@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd 
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context.xsd">
+
+<!-- Thre are three ways to set injection -->
+<!-- First way -->
+
+<!-- 	<bean class="com.SpringCore.Student" name="student1">
+		<property name="studId">
+			<value>1</value>
+		</property>
+		<property name="studName">
+			<value>Shruti Amrutkar</value>
+		</property>
+		<property name="studCity">
+			<value>Dhule</value>
+		</property>
+
+	</bean> -->
+	
+	<!-- Second way -->
+	<!-- <bean class="com.SpringCore.Student" name="student1">
+	<property name="studId" value="1" />
+	<property name="studName" value="Shruti Amrutkar"/>
+	<property name="studCity" value="Dhule" />
+	</bean>
+	
+	<bean class="com.SpringCore.Student" name="student2">
+	<property name="studId" value="2" />
+	<property name="studName" value="Nikita Morankar"/>
+	<property name="studCity" value="Pachora" />
+	</bean> -->
+	
+	
+	<!--Third way using p schema  -->
+	<bean class="com.SpringCore.Student" name="student1" p:studId="1"  p:studName="Hitesh Ahire" p:studCity="Dabli"/>
+	<bean class="com.SpringCore.Student" name="student2" p:studId="2"  p:studName="Pradhunya Shewale" p:studCity="Tehre"/>
+	<bean class="com.SpringCore.Student" name="student3" p:studId="3"  p:studName="Vrushali Surywanshi" p:studCity="Mungshe"/>
+	
+</beans>

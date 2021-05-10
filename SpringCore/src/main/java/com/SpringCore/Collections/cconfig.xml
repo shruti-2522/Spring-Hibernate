@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd 
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context.xsd">
+
+	<bean name="emp1" class="com.SpringCore.Collections.Emp">
+		<property name="name" value="Vishakha Ahire" />
+
+		<property name="phone_nos">
+			<list>
+				<value>7499549303</value>
+				<value>7028660395</value>
+				<value>8999649582</value>
+			</list>
+		</property>
+
+		<property name="addresseas">
+			<set>
+				<value>Dhule</value>
+				<value>Malegaon</value>
+				<value>Nashik</value>
+			</set>
+		</property>
+
+		<property name="courseas">
+			<map>
+				<entry key="Java" value="2 months" />
+				<entry key="Java Frameworks" value="2.5 months" />
+				<entry key="Android" value="2 months" />
+
+			</map>
+		</property>
+		
+		<property name="prop1">
+		<props>
+		<prop key="name">SHRUTI AMRUTKAR</prop>
+		<prop key="Rno">04</prop>
+		</props>
+		</property>
+	</bean>
+
+</beans>
